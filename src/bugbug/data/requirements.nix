@@ -2,7 +2,7 @@
 # See more at: https://github.com/garbas/pypi2nix
 #
 # COMMAND:
-#   pypi2nix -v -C /app/src/bugbug/data/../../../tmp/pypi2nix -V 3.7 -O ../../../nix/requirements_override.nix -E blas -E gfortran -E libffi -E openssl -E pkgconfig -E freetype.dev -E libjpeg.dev -E hdf5 -s numpy -s flit -s intreehooks -s cython -s pkgconfig -e pytest-runner -e setuptools-scm -r requirements.txt -r requirements-dev.txt
+#   pypi2nix -v -C /tmp/release-services-v3kem6ad/src/bugbug/data/../../../tmp/pypi2nix -V 3.7 -O ../../../nix/requirements_override.nix -E blas -E gfortran -E libffi -E openssl -E pkgconfig -E freetype.dev -E libjpeg.dev -E hdf5 -s numpy -s flit -s intreehooks -s cython -s pkgconfig -e pytest-runner -e setuptools-scm -r requirements.txt -r requirements-dev.txt
 #
 
 { pkgs ? import <nixpkgs> {},
@@ -444,10 +444,10 @@ let
     };
 
     "boto3" = python.mkDerivation {
-      name = "boto3-1.9.91";
+      name = "boto3-1.9.93";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/d0/04/031df9ef44f7249019d6588a7ec34143a1d8a0066953b8748192f8b01439/boto3-1.9.91.tar.gz";
-        sha256 = "428c6d535f373a7203ed7ec687bb826b88e62de7befc3816e0aacd305f7572a2";
+        url = "https://files.pythonhosted.org/packages/c9/1a/55109b4bd17ce7f1ae04d483fc107ff61cc93fe17dfe4e44e3f718038fe4/boto3-1.9.93.tar.gz";
+        sha256 = "70e71e0192a68f65754ab9d2a335be3c6856a1e8a15f3bd6263ea12e2f442bc7";
       };
       doCheck = commonDoCheck;
       checkPhase = "";
@@ -466,10 +466,10 @@ let
     };
 
     "botocore" = python.mkDerivation {
-      name = "botocore-1.12.91";
+      name = "botocore-1.12.93";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/92/98/562846861aa52c90a4d206496af40c026067ee221d2ad5353f8b8ea21125/botocore-1.12.91.tar.gz";
-        sha256 = "bd788c6ebae55db17d9cc125fa3817fddb20d3fc8bd15791995d82c466238a3b";
+        url = "https://files.pythonhosted.org/packages/6f/5c/551e2fef1ebe3c8d46fdea94b4cb92b0cff167ffcd741f2d103cce339602/botocore-1.12.93.tar.gz";
+        sha256 = "d3cea95919892eac30e2ff8c5a8908022d5a93f917df3cff4ed06a6926dcc0e5";
       };
       doCheck = commonDoCheck;
       checkPhase = "";
@@ -1540,18 +1540,16 @@ let
     };
 
     "more-itertools" = python.mkDerivation {
-      name = "more-itertools-5.0.0";
+      name = "more-itertools-6.0.0";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/dd/26/30fc0d541d9fdf55faf5ba4b0fd68f81d5bd2447579224820ad525934178/more-itertools-5.0.0.tar.gz";
-        sha256 = "38a936c0a6d98a38bcc2d03fdaaedaba9f412879461dd2ceff8d37564d6522e4";
+        url = "https://files.pythonhosted.org/packages/dd/f4/cdfbb6f07f767e0cd8a11b16adfecc735b6eb87dbebda026ce8898e1cc22/more-itertools-6.0.0.tar.gz";
+        sha256 = "590044e3942351a1bdb1de960b739ff4ce277960f2425ad4509446dbace8d9d1";
       };
       doCheck = commonDoCheck;
       checkPhase = "";
       installCheckPhase = "";
       buildInputs = commonBuildInputs ++ [ ];
-      propagatedBuildInputs = [
-        self."six"
-      ];
+      propagatedBuildInputs = [ ];
       meta = with pkgs.stdenv.lib; {
         homepage = "https://github.com/erikrose/more-itertools";
         license = licenses.mit;
@@ -1833,10 +1831,10 @@ let
     };
 
     "parso" = python.mkDerivation {
-      name = "parso-0.3.3";
+      name = "parso-0.3.4";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/92/63/02c20817d58db8703b250128ea2c63488fb6599a2d9c0bc37d3daac6497f/parso-0.3.3.tar.gz";
-        sha256 = "8162be7570ffb34ec0b8d215d7f3b6c5fab24f51eb3886d6dee362de96b6db94";
+        url = "https://files.pythonhosted.org/packages/01/70/d9fa1a10aed70c192815aac7fd3eb38ef49aa5ab9cb36129ae22c8ecbf1f/parso-0.3.4.tar.gz";
+        sha256 = "68406ebd7eafe17f8e40e15a84b56848eccbf27d7c1feb89e93d8fca395706db";
       };
       doCheck = commonDoCheck;
       checkPhase = "";
